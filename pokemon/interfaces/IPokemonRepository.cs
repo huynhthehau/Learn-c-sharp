@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using pokemon.Dto;
 using pokemon.models;
 
 namespace pokemon.interfaces
@@ -13,5 +14,9 @@ namespace pokemon.interfaces
         Pokemon GetPokemon(string name);
         decimal GetPokemonRating(int pokeId);
         bool PokemonExists(int pokeId);
+        bool CreatePokemon(int ownerId, int categoryId, Pokemon pokemon);
+        bool Save();
+        bool DeletePokemon(Pokemon pokemon);
+        Pokemon GetPokemonTrimToUpper(PokemonDto pokemonCreate);
     }
 }
