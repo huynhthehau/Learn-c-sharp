@@ -1,0 +1,15 @@
+version: '3.9'
+services:
+  sqlserver: 
+    image: mcr.microsoft.com/mssql/server:2022-latest 
+    container_name: stock_app_db
+    environment: 
+      - ACCEPT_EULA=Y 
+      - SA_PASSWORD=Abc123456789@
+    ports:
+      - "1434:1433"
+    volumes:   
+      - ./db_data:/var/opt/mssql/data
+    restart: always
+    mem_limit: 12g 
+    memswap_limit: 13g     

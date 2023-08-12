@@ -26,6 +26,7 @@ namespace pokemon.Controllers
                 return BadRequest(ModelState);
             return Ok(categories);
         }
+
         [HttpGet("{categoryId}")]
         [ProducesResponseType(200, Type = typeof(Category))]
         [ProducesResponseType(400)]
