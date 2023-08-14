@@ -11,8 +11,9 @@
     "WebChatApp": {
       "commandName": "Project",
       "dotnetRunMessages": true,
+      "launchUrl": "swagger",
       "launchBrowser": true,
-      "applicationUrl": "https://localhost:7030;http://localhost:5116",
+      "applicationUrl": "https://localhost:5000",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
