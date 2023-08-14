@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
@@ -10,7 +10,7 @@ using WebChatApp.Services;
 var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration;
 // Add services to the container.
-builder.Services.AddRazorPages(opts =>
+var mvcBuilder = builder.Services.AddRazorPages(opts =>
 {
     opts.Conventions.AddAreaFolderRouteModelConvention("Idenity", "/Account/", model =>
     {
@@ -23,9 +23,17 @@ builder.Services.AddRazorPages(opts =>
     });
 });
 
+if (builder.Environment.IsDevelopment())
+{
+    mvcBuilder.AddRazorRuntimeCompilation();
+}
+
+
+
 builder.Services.AddDbContext<ManageAppDbContext>(
     options => options.UseNpgsql(configuration.GetConnectionString("DefaultConnection"))
 );
+
 
 builder.Services
     .AddIdentity<ManageUser, IdentityRole>()

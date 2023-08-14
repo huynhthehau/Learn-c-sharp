@@ -11,7 +11,7 @@ build_property.RootNamespace = WebChatApp
 build_property.ProjectDir = A:\learn-c-sharp\WebChatApp\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
-build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = A:\learn-c-sharp\WebChatApp
 build_property._RazorSourceGeneratorDebug = 
 
@@ -161,6 +161,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [A:/learn-c-sharp/WebChatApp/Areas/Identity/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[A:/learn-c-sharp/WebChatApp/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [A:/learn-c-sharp/WebChatApp/Areas/Identity/Pages/_ViewImports.cshtml]

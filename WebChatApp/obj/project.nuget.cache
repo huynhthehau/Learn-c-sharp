@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "eerr+Rzpqka4IMZW8CEBdLkHDC2ir1jPC5IeStXaYi2u+rGabBdSNdBpc43PQ12q91vKg5pMFVbH90197932ZA==",
+  "dgSpecHash": "F61LKMYucqs/BUEmo9JqhHb98DJ6cD5fEjkwYC0i6tjKAIboaWYEsFaN+VpqEU5JYZV/rt0cALWKceeOP5REuw==",
   "success": true,
   "projectFilePath": "A:\\learn-c-sharp\\WebChatApp\\WebChatApp.csproj",
   "expectedPackageFiles": [
@@ -68,7 +68,9 @@
     "C:\\Users\\theha\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.21\\microsoft.aspnetcore.cryptography.keyderivation.6.0.21.nupkg.sha512",
     "C:\\Users\\theha\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\6.0.21\\microsoft.aspnetcore.identity.entityframeworkcore.6.0.21.nupkg.sha512",
     "C:\\Users\\theha\\.nuget\\packages\\microsoft.aspnetcore.identity.ui\\6.0.21\\microsoft.aspnetcore.identity.ui.6.0.21.nupkg.sha512",
-    "C:\\Users\\theha\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\6.0.0\\microsoft.aspnetcore.razor.language.6.0.0.nupkg.sha512",
+    "C:\\Users\\theha\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.extensions\\6.0.21\\microsoft.aspnetcore.mvc.razor.extensions.6.0.21.nupkg.sha512",
+    "C:\\Users\\theha\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.runtimecompilation\\6.0.21\\microsoft.aspnetcore.mvc.razor.runtimecompilation.6.0.21.nupkg.sha512",
+    "C:\\Users\\theha\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\6.0.21\\microsoft.aspnetcore.razor.language.6.0.21.nupkg.sha512",
     "C:\\Users\\theha\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\5.0.0\\microsoft.bcl.asyncinterfaces.5.0.0.nupkg.sha512",
     "C:\\Users\\theha\\.nuget\\packages\\microsoft.build\\17.3.2\\microsoft.build.17.3.2.nupkg.sha512",
     "C:\\Users\\theha\\.nuget\\packages\\microsoft.build.framework\\17.3.2\\microsoft.build.framework.17.3.2.nupkg.sha512",
@@ -79,7 +81,7 @@
     "C:\\Users\\theha\\.nuget\\packages\\microsoft.codeanalysis.csharp.features\\4.0.0\\microsoft.codeanalysis.csharp.features.4.0.0.nupkg.sha512",
     "C:\\Users\\theha\\.nuget\\packages\\microsoft.codeanalysis.csharp.workspaces\\4.0.0\\microsoft.codeanalysis.csharp.workspaces.4.0.0.nupkg.sha512",
     "C:\\Users\\theha\\.nuget\\packages\\microsoft.codeanalysis.features\\4.0.0\\microsoft.codeanalysis.features.4.0.0.nupkg.sha512",
-    "C:\\Users\\theha\\.nuget\\packages\\microsoft.codeanalysis.razor\\6.0.0\\microsoft.codeanalysis.razor.6.0.0.nupkg.sha512",
+    "C:\\Users\\theha\\.nuget\\packages\\microsoft.codeanalysis.razor\\6.0.21\\microsoft.codeanalysis.razor.6.0.21.nupkg.sha512",
     "C:\\Users\\theha\\.nuget\\packages\\microsoft.codeanalysis.scripting.common\\4.0.0\\microsoft.codeanalysis.scripting.common.4.0.0.nupkg.sha512",
     "C:\\Users\\theha\\.nuget\\packages\\microsoft.codeanalysis.workspaces.common\\4.0.0\\microsoft.codeanalysis.workspaces.common.4.0.0.nupkg.sha512",
     "C:\\Users\\theha\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
