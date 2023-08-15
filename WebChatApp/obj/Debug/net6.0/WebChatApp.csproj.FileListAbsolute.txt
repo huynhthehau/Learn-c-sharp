@@ -548,3 +548,4 @@ A:\learn-c-sharp\WebChatApp\bin\Debug\net6.0\refs\System.Xml.XPath.XDocument.dll
 A:\learn-c-sharp\WebChatApp\bin\Debug\net6.0\refs\WindowsBase.dll
 A:\learn-c-sharp\WebChatApp\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
 A:\learn-c-sharp\WebChatApp\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.dll
+A:\learn-c-sharp\WebChatApp\bin\Debug\net6.0\libman.json

@@ -1,8 +1,10 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
 using System.Text.RegularExpressions;
 using WebChatApp.Data;
 using WebChatApp.Data.Entities;
+using WebChatApp.Hubs;
 using WebChatApp.Models;
 
 namespace WebChatApp.Controllers
@@ -14,15 +16,18 @@ namespace WebChatApp.Controllers
         private readonly ManageAppDbContext _context;
         private readonly IMapper _mapper;
         private readonly IWebHostEnvironment _environment;
+        private readonly IHubContext<ChatHub> _hubContext;
 
         public UploadController(ManageAppDbContext context,
             IMapper mapper,
             IWebHostEnvironment environment,
-            IConfiguration configruation)
+            IConfiguration configruation,
+            IHubContext<ChatHub> hubContext)
         {
             _context = context;
             _mapper = mapper;
             _environment = environment;
+            this._hubContext = hubContext;
             FileSizeLimit = configruation.GetSection("FileUpload").GetValue<int>("FileSizeLimit");
             AllowedExtensions = configruation.GetSection("FileUpload").GetValue<string>("AllowedExtensions").Split(",");
         }
@@ -64,7 +69,7 @@ namespace WebChatApp.Controllers
                 var message = new Message()
                 {
                     Content = Regex.Replace(htmlImage, @"(?i)<(?!img|a|/a|/img).*?>", string.Empty),
-                    Timestamp = DateTime.Now,
+                    Timestamp = DateTime.UtcNow,
                     FromUser = user,
                     ToRoom = room
                 };
@@ -74,7 +79,7 @@ namespace WebChatApp.Controllers
 
                 // Send image-message to group
                 var messageViewModel = _mapper.Map<Message, MessageViewModel>(message);
-                //   await _hubContext.Clients.Group(room.Name).SendAsync("newMessage", messageViewModel);
+                await _hubContext.Clients.Group(room.Name).SendAsync("newMessage", messageViewModel);
 
                 return Ok();
             }

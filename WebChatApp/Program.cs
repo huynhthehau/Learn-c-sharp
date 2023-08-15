@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using WebChatApp.Data;
 using WebChatApp.Data.Entities;
+using WebChatApp.Hubs;
 using WebChatApp.IdentityServer;
 using WebChatApp.Services;
 
@@ -57,6 +58,7 @@ builder.Services.AddAuthorization(options =>
 });
 
 builder.Services.AddControllersWithViews();
+builder.Services.AddSignalR();
 builder.Services.AddSwaggerGen(
     c =>
     {
@@ -132,6 +134,7 @@ app.UseEndpoints(endpoints =>
 {
     endpoints.MapDefaultControllerRoute();
     endpoints.MapRazorPages();
+    endpoints.MapHub<ChatHub>("/chatHub");
 });
 
 app.UseIdentityServer();

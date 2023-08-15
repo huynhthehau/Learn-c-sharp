@@ -1,21 +1,26 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
 using Microsoft.EntityFrameworkCore;
+using System.Text.RegularExpressions;
 using WebChatApp.Data;
 using WebChatApp.Data.Entities;
+using WebChatApp.Hubs;
 using WebChatApp.Models;
 
 namespace WebChatApp.Controllers
 {
-    public class MessageController : BaseController
+    public class MessagesController : BaseController
     {
         private readonly ManageAppDbContext _context;
         private readonly IMapper _mapper;
+        private readonly IHubContext<ChatHub> _hubContext;
 
-        public MessageController(ManageAppDbContext context, IMapper mapper)
+        public MessagesController(ManageAppDbContext context, IMapper mapper, IHubContext<ChatHub> hubContext)
         {
             this._context = context;
             this._mapper = mapper;
+            this._hubContext = hubContext;
         }
 
         [HttpGet("{id}")]
@@ -49,6 +54,32 @@ namespace WebChatApp.Controllers
             var messagesViewModel = _mapper.Map<IEnumerable<Message>, IEnumerable<MessageViewModel>>(messages);
 
             return Ok(messagesViewModel);
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<Message>> Create(MessageViewModel messageViewModel)
+        {
+            var user = _context.Users.FirstOrDefault(u => u.UserName == User.Identity.Name);
+            var room = _context.Rooms.FirstOrDefault(r => r.Name == messageViewModel.Room);
+            if (room == null)
+                return BadRequest();
+
+            var msg = new Message()
+            {
+                Content = Regex.Replace(messageViewModel.Content, @"<.*?>", string.Empty),
+                FromUser = user,
+                ToRoom = room,
+                Timestamp = DateTime.UtcNow
+            };
+
+            _context.Messages.Add(msg);
+            await _context.SaveChangesAsync();
+
+            // Broadcast the message
+            var createdMessage = _mapper.Map<Message, MessageViewModel>(msg);
+            await _hubContext.Clients.Group(room.Name).SendAsync("newMessage", createdMessage);
+
+            return CreatedAtAction(nameof(Get), new { id = msg.Id }, createdMessage);
         }
 
         [HttpDelete("{id}")]

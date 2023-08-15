@@ -58,10 +58,7 @@ namespace WebChatApp.Controllers
 
             var uservms = await users.Select(u => new UserViewModel() // vì muốn xem lên ta dùng UserVm
             {
-                Id = u.Id,
-                UserName = u.UserName,
-                Email = u.Email,
-                PhoneNumber = u.PhoneNumber,
+
 
             }).ToListAsync();
 
@@ -78,10 +75,7 @@ namespace WebChatApp.Controllers
 
             var userVm = new UserViewModel()
             {
-                Id = user.Id,
-                UserName = user.UserName,
-                Email = user.Email,
-                PhoneNumber = user.PhoneNumber,
+
 
             };
             return Ok(userVm);
