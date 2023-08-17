@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "EV7mGwGuT54yYaVmIkvtSZd9Vgy8lWLK0r+GXnDhZCs=",
+  "Hash": "Q+bbI6t9zX1MB8DZOSgq8J4D7ypPEnwPI9hqmve1Wzo=",
   "Source": "WebChatApp",
   "BasePath": "_content/WebChatApp",
   "Mode": "Default",
@@ -1377,6 +1377,23 @@
       "OriginalItemSpec": "wwwroot\\lib\\KnockoutJS\\knockout-3.5.1.js"
     },
     {
+      "Identity": "A:\\learn-c-sharp\\WebChatApp\\wwwroot\\uploads\\202330150833_meme.jpg",
+      "SourceId": "WebChatApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "A:\\learn-c-sharp\\WebChatApp\\wwwroot\\",
+      "BasePath": "_content/WebChatApp",
+      "RelativePath": "uploads/202330150833_meme.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\202330150833_meme.jpg"
+    },
+    {
       "Identity": "A:\\learn-c-sharp\\WebChatApp\\wwwroot\\uploads\\202336150826_meme.jpg",
       "SourceId": "WebChatApp",
       "SourceType": "Discovered",
@@ -1426,6 +1443,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\202337150844_meme.jpg"
+    },
+    {
+      "Identity": "A:\\learn-c-sharp\\WebChatApp\\wwwroot\\uploads\\202342150809_meme.jpg",
+      "SourceId": "WebChatApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "A:\\learn-c-sharp\\WebChatApp\\wwwroot\\",
+      "BasePath": "_content/WebChatApp",
+      "RelativePath": "uploads/202342150809_meme.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\202342150809_meme.jpg"
     },
     {
       "Identity": "C:\\Users\\theha\\.nuget\\packages\\microsoft.aspnetcore.identity.ui\\6.0.21\\staticwebassets\\V5\\css\\site.css",

@@ -84,6 +84,7 @@ namespace WebChatApp.Hubs
                 return Context.User.Identity.Name;
             }
         }
+
         public override Task OnConnectedAsync()
         {
             try
@@ -109,6 +110,7 @@ namespace WebChatApp.Hubs
             }
             return base.OnConnectedAsync();
         }
+
         private string GetDevice()
         {
             var device = Context.GetHttpContext().Request.Headers["Device"].ToString();
@@ -117,6 +119,7 @@ namespace WebChatApp.Hubs
 
             return "Web";
         }
+
         public override Task OnDisconnectedAsync(Exception exception)
         {
             try
