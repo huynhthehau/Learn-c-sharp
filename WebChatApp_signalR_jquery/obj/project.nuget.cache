@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "F61LKMYucqs/BUEmo9JqhHb98DJ6cD5fEjkwYC0i6tjKAIboaWYEsFaN+VpqEU5JYZV/rt0cALWKceeOP5REuw==",
+  "dgSpecHash": "3m9j8p/V6BTxeUyfDeNfoHOcdmaix1nMROwT1SwVy1kgBANbcv55Vm74Wq1SPY3AuYQgAxFl2oquWsAeKIb2/g==",
   "success": true,
-  "projectFilePath": "A:\\learn-c-sharp\\WebChatApp\\WebChatApp.csproj",
+  "projectFilePath": "A:\\learn-c-sharp\\WebChatApp_signalR_jquery\\WebChatApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\theha\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\theha\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
